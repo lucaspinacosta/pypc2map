@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg='pypc2map' name='pypc2map' type='pypc2map.py' output='screen' cwd='node'>
+        <rosparam file='$(find pypc2map)/config/pypc2map.yaml' command='load' />
+        <remap from="points" to="lio_sam/mapping/map_global"/>
+        <remap from="pypc2map" to="lio_sam/mapping/map_global/map" />
+    </node>
+
+</launch>

@@ -1,0 +1,52 @@
+#draw unknown regions
+draw_unknown: true
+
+#the frame of the map
+global_frame: odom
+
+# max cloud range
+max_cloud_range: 20.0
+
+# adds padding to size of the map
+size_offset_x: 0.0
+size_offset_y: 0.0
+
+# determines whether the map's origin is calculated based on the cloud (false) or is set the size of the map (true)
+rolling_window: false
+
+#Change the resolution of the map in meters/pixel
+map_resolution: 0.5
+
+#initial window size for morphological opening
+initial_winSize: 1
+
+#maximum window size for morphological opening
+max_winSize: 16
+
+#incremental window size for morphological opening
+inc_winSize: 1
+
+#slope within the scene
+slope: 1.5
+
+#minimum height difference threshold for differentiating ground
+min_heigth_dif: 1.5
+
+#maximum height difference threshold for differentiating ground
+max_heigth_dif: 2.0
+
+#point cloud outlier removal
+filters: false
+
+#minimum amount of points that the sphere should contain (Radius outlier removal)
+filter_rro_nb_points: 16
+
+#radius of the sphere that will be used for counting the neighbors (Radius outlier removal)
+filter_rro_radius: 5.0
+
+#how many neighbors are taken into account in order to calculate the average distance for a given point (Statistical outlier removal)
+filter_rso_nb_neighbors: 20
+
+#setting the threshold level based on the standard deviation of the average distances across the point cloud
+#the lower this number the more aggressive the filter will be. (Statistical outlier removal)
+filter_rso_std_ratio: 5.5
